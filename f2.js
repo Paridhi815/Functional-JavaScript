@@ -1,5 +1,21 @@
+let c=0;
 function repeat(operation,num)
   {
-    return repeat(operations,num);
+    if(num===0)
+      {
+      console.log("Counter:",c);
+      return c;
+      }
+    else
+    {
+    operation();
+    return repeat(operation,num-=1);
+    }
   }
-module.exports=repeat;
+function operation()
+{
+  c++;
+}
+//module.exports=repeat;
+
+console.log(repeat(operation,5)===5);
