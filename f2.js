@@ -1,4 +1,5 @@
-repeat(operation,num)
+function repeat(operation,num)
   {
-    return repeat();
+    return repeat(operations,num);
   }
+module.exports=repeat;
