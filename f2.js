@@ -6,10 +6,14 @@ function repeat(operation,num)
       console.log("Counter:",c);
       return c;
       }
-    else
+    else if (num>0)
     {
     operation();
     return repeat(operation,num-=1);
+    }
+    else
+    {
+      return false;
     }
   }
 function operation()
@@ -18,4 +22,5 @@ function operation()
 }
 //module.exports=repeat;
 
-console.log(repeat(operation,5)===5);
+console.log("Should pass base test:",repeat(operation,5)===5);
+console.log("Should not work for negative numbers:",repeat(operation,-3)===false);
