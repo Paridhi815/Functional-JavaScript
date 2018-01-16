@@ -24,3 +24,5 @@ function operation()
 
 console.log("Should pass base test:",repeat(operation,5)===5);
 console.log("Should not work for negative numbers:",repeat(operation,-3)===false);
+c=0;
+console.log("Should work for zero base case:",repeat(operation,0)===0);
