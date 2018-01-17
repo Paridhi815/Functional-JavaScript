@@ -9,6 +9,7 @@ function func (element1, element2) {
   return element1 + element2
 }
 module.exports = reduce
-console.log('Should pass the basic test case:', reduce([1, 2, 3], func, 0))
-console.log('Should pass the empty array case:', reduce([], func, 0))
-console.log('Should pass the basic test case:', reduce([1, 2, 3, 4], func, 0))
+console.log('Should pass the basic test case:', reduce([1, 2, 3], func, 0) === 6)
+console.log('Should pass the empty array case:', reduce([], func, 0) === 0)
+console.log('Should add:', func(1, 2) === 3)
+console.log('Should work for negative numbers', reduce([1, 2, -3], func, 0) === 0)
