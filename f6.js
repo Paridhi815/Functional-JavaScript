@@ -1,5 +1,4 @@
 function countWords (inputWords) {
-  // SOLUTION GOES HERE
   return inputWords.reduce(function (count, word) {
     if (count[word]) {
       count[word] = ++count[word]
