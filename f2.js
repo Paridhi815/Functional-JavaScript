@@ -1,28 +1,21 @@
-let c=0;
-function repeat(operation,num)
-  {
-    if(num===0)
-      {
-      console.log("Counter:",c);
-      return c;
-      }
-    else if (num>0)
-    {
-    operation();
-    return repeat(operation,num-=1);
-    }
-    else
-    {
-      return false;
-    }
+let c = 0
+function repeat (operation, num) {
+  if (num === 0) {
+    console.log('Counter:', c)
+    return c
+  } else if (num > 0) {
+    operation()
+    return repeat(operation, num -= 1)
+  } else {
+    return false
   }
-function operation()
-{
-  c++;
 }
-//module.exports=repeat;
+function operation () {
+  c++
+}
+// module.exports=repeat;
 
-console.log("Should pass base test:",repeat(operation,5)===5);
-console.log("Should not work for negative numbers:",repeat(operation,-3)===false);
-c=0;
-console.log("Should work for zero base case:",repeat(operation,0)===0);
+console.log('Should pass base test:', repeat(operation, 5) === 5)
+console.log('Should not work for negative numbers:', repeat(operation, -3) === false)
+c = 0
+console.log('Should work for zero base case:', repeat(operation, 0) === 0)
