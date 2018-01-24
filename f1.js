@@ -1,13 +1,10 @@
-function upperCaser(input)
-{
-  if(input!="" && typeof(input)==="string")
-    return (input.toUpperCase());
-  else
-    return false;
+function upperCaser(input) {
+  if (input != '' && typeof (input) === 'string') { return (input.toUpperCase()); }
+  return false;
 }
-module.exports=upperCaser
-console.log("Print String in upper case:",upperCaser("Pari")==="PARI");
-//no other test case required,one is enough.We assume input is valid.
+module.exports = upperCaser;
+console.log('Print String in upper case:', upperCaser('Pari') === 'PARI');
+// no other test case required,one is enough.We assume input is valid.
 // console.log("Print String which includes numbers in upper case:",upperCaser("567hgh")==="567HGH");
 // console.log("Print String which includes special characters in upper case:",upperCaser("nvs&^$#/;;'hgsh'")==="NVS&^$#/;;'HGSH'");
 // console.log("Print String which is a NULL in upper case:",upperCaser("")===false);

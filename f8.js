@@ -6,21 +6,10 @@ function duckCount () {
 
 module.exports = duckCount
 
-// for duck
-let duck = {
-  quack: function () {
-    console.log('quack')
-  }
-}
-console.log('Should pass for duck case:', duckCount(duck))
-// for not duck
-let notDuck = Object.create({quack: true})
-console.log('Should pass for not duck case:', duckCount(notDuck))
-
 // for both together
 notDuck = Object.create({quack: true})
 duck = {quack: true}
-console.log('Should pass for both', duckCount(duck, notDuck))
+console.log('Should pass for both', duckCount(duck, notDuck) === 1)
 
 // for multiple duck
 duck = {
@@ -33,4 +22,8 @@ duck = {
 }
 ducks = {quack: true}
 
-console.log('Should pass for duck case:', duckCount(duck, ducks))
+console.log('Should pass for multiple ducks:', duckCount(duck, ducks, duck) === 3)
+
+console.log('Should pass for multiple noDucks:', duckCount(notDuck, notDuck) === 0)
+
+console.log('When no ', duckCount(notDuck, notDuck) === 0)

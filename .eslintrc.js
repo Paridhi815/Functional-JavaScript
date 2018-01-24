@@ -1,3 +1,6 @@
-module.exports = {
-    "extends": "standard"
-};
+// module.exports = {
+//     "extends": "airbnb-base",
+//     "rules":{
+//     "no-shadow":0
+//   }
+// };
